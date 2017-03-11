@@ -1,0 +1,20 @@
+{
+  "name": "bitty",
+  "version": "0.0.1",
+  "description": "A bitcoin trading AI",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OverTheAIProject/bitty.git"
+  },
+  "author": "OverTheAIProject (https://github.com/OverTheAIProject)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/OverTheAIProject/bitty/issues"
+  },
+  "homepage": "https://github.com/OverTheAIProject/bitty#readme"
+}
