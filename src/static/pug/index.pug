@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Bitty AI
+    link(rel='stylesheet', href='css/base.css')
+  body
+    h1 Welcome to Bitty the AI
+
+    p We are using Node.js
+      | 
+      script.
+        document.write(process.versions.node)
+      | , Chromium 
+      script.
+        document.write(process.versions.chrome)
+      | , and Electron
+      script.
+        document.write(process.versions.electron)
+      | .
+  script.
+    require('./renderer.js')
