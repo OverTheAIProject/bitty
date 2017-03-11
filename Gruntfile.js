@@ -7,6 +7,18 @@ module.exports = function (grunt) {
       all: {
         src: ['package.json', 'src/**/*.js'],
         dest: 'app/'
+      },
+      bootstrap: {
+        expand: true,
+        cwd: 'node_modules/bootstrap/dist',
+        src: '**',
+        dest: 'app/src/static',
+      },
+      jquery: {
+        expand: true,
+        cwd: 'node_modules/jquery/dist',
+        src: '**',
+        dest: 'app/src/static/js',
       }
     },
     electron: {

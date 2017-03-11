@@ -3,20 +3,42 @@ html
   head
     meta(charset='UTF-8')
     title Bitty AI
-    link(rel='stylesheet', href='css/base.css')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/bootstrap-responsive.min.css')
+    //link(rel='stylesheet', href='css/base.css')
   body
-    h1 Welcome to Bitty the AI
+    block content
+      .container-fluid
+        .top
+        
+          h1.jumbotron.text-center Welcome to Bitty the AI
 
-    p We are using Node.js
-      | 
-      script.
-        document.write(process.versions.node)
-      | , Chromium 
-      script.
-        document.write(process.versions.chrome)
-      | , and Electron
-      script.
-        document.write(process.versions.electron)
-      | .
+          form.form-inline.clearfix
+            .form-group
+              label.sr-only(for="inputAmount") Amount (in dollars)
+              .input-group
+                .input-group-addon $
+                input.form-control(type="text" id="inputAmount" placeholder="Amount")
+                .input-group-addon .00
+            button.btn.btn-primary(type="submit") Transfer
+        
+        .content
+          table.table.table-striped
+            thead
+              tr
+                th Table
+                th Heading
+            tbody
+              tr
+                td Blah
+                td Test
+              tr
+                td Hello
+                td World
+        
+        .footer
+
   script.
     require('./renderer.js')
+    require('static/js/jquery.min.js')
+    require('static/js/bootstrap.min.js')
