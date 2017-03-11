@@ -3,15 +3,14 @@ html
   head
     meta(charset='UTF-8')
     title Bitty AI
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-    link(rel='stylesheet', href='css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='css/bootstrap.css')
     //link(rel='stylesheet', href='css/base.css')
   body
     block content
       .container-fluid
         .top
         
-          h1.jumbotron.text-center Welcome to Bitty the AI
+          h1.jumbotron.text-center Bitty AI
 
           form.form-inline.clearfix
             .form-group
@@ -30,15 +29,48 @@ html
                 th Heading
             tbody
               tr
-                td Blah
+                td no blah
                 td Test
               tr
                 td Hello
                 td World
-        
+                
+          .container#event
+            .col-sm-6
+              .panel.panel-default
+                .panel-heading
+                  h3 Add your mom
+                .panel.body
+                  .form-group
+                    input.form-control(placeholder="yourmom name" v-model="event.name")
+                  .form-group
+                    textarea.form-control(placeholder="yourmom description" v-model="event.description")
+                  .form-group
+                    label(for="gender") gender
+                    select.form-control#gender(v-model="event.gender")
+                      option male
+                      option female
+                      option trans 
+                      option apache helicopter
+                      option fighter jet
+                      option tomato
+                      option potato
+                      option genderfluid
+                      option genderneutral
+                  .form-group
+                    input.form-control(placeholder="date" type="date" v-model="event.date")
+                  button.btn.btn-primary(v-on="click: addEvent") Suckmit 
+            .col-sm-6
+              .list-group
+                a.list-group-item(href="#" v-repeat="event in events")
+                  h4.list-group-item-heading
+                    i.glyphicon.glyphicon-bullhorn
+                    {{ event.name }}
+              
         .footer
 
   script.
     require('./renderer.js')
+    require('../app.js')
     require('static/js/jquery.min.js')
     require('static/js/bootstrap.min.js')

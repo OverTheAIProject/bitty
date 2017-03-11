@@ -31,10 +31,13 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-electron": "^5.0.0",
     "grunt-run": "^0.6.0",
+    "jquery": "^3.1.1",
     "less": "^2.7.2",
     "load-grunt-tasks": "^3.5.2",
     "pug": "^2.0.0-beta11",
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "vue": "^2.2.2",
+    "vue-resource": "^1.2.1"
   },
   "dependencies": {
     "electron": "^1.6.2"

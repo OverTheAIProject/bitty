@@ -19,6 +19,18 @@ module.exports = function (grunt) {
         cwd: 'node_modules/jquery/dist',
         src: '**',
         dest: 'app/src/static/js',
+      },
+      vue: {
+        expand: true,
+        cwd: 'node_modules/vue/dist',
+        src: 'vue.js',
+        dest: 'app/src/static/js',
+      },
+      'vue-resource': {
+        expand: true,
+        cwd: 'node_modules/vue-resource/dist',
+        src: 'vue-resource.js',
+        dest: 'app/src/static/js',
       }
     },
     electron: {
