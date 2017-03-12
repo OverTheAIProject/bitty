@@ -1,17 +1,8 @@
+var Vue = require('vue');
+
 new Vue({
-    el: '#event',
+    el: '#app',
     data: {
-        event: {name:'', description:'', gender:'', date:''},
-        events: []
+        helloFromVue: "Hello from Vue!"
     },
-    ready: function () {
-        
-    },
-    addEvent: function () {
-        if(this.event.name) {
-            this.events.push(this.event);
-            this.event = {name:'', description:'', gender:'', date:''};
-        }
-    },
-    methods: {},
 });

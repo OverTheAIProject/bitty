@@ -107,7 +107,13 @@ module.exports = function (grunt) {
       },
       gruntfile: {
         files: "Gruntfile.js",
-        tasks: 'default-watch'
+        tasks: 'default'
+      }
+    },
+    browserify: {
+      js: {
+        src: 'src/app.js',
+        dest: 'app/src/app.js'
       }
     }
   });
@@ -115,9 +121,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-run');
 
-  grunt.registerTask('default', ['copy', 'less', 'pug']);
+  grunt.registerTask('default', ['copy', 'browserify', 'less', 'pug']);
   grunt.registerTask('default-watch', ['default', 'watch']);
   grunt.registerTask('debug', ['default', 'run:debug', 'watch']);
 }

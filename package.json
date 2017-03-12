@@ -19,11 +19,13 @@
   "homepage": "https://github.com/OverTheAIProject/bitty#readme",
   "devDependencies": {
     "bootstrap": "^3.3.7",
+    "browserify": "^14.1.0",
     "electron-livereload": "0.0.2",
     "electron-prebuilt": "^1.4.13",
     "electron-reload": "^1.1.0",
     "eslint": "^3.17.1",
     "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-pug": "^1.0.0",
@@ -31,6 +33,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-electron": "^5.0.0",
     "grunt-run": "^0.6.0",
+    "grunt-vue": "^0.1.5",
     "jquery": "^3.1.1",
     "less": "^2.7.2",
     "load-grunt-tasks": "^3.5.2",
@@ -41,5 +44,8 @@
   },
   "dependencies": {
     "electron": "^1.6.2"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
   }
 }
